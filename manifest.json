@@ -22,16 +22,13 @@
                 "https://www.facebook.com/*"
             ],
             "js": [
-                "content.js"
+                "js/content.js"
             ]
         }
     ],
     "icons": {
-            "16": "assets/logo/icon16.png",
-            "48": "assets/logo/icon48.png",
-            "128": "assets/logo/icon128.png"
-    },
-    "background": {
-        "service_worker": "content.js"
+        "16": "assets/logo/icon16.png",
+        "48": "assets/logo/icon48.png",
+        "128": "assets/logo/icon128.png"
     }
 }
