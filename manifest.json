@@ -1,20 +1,19 @@
 {
     "manifest_version": 3,
-    "name": "Facebook Suggested Posts Remover",
-    "version": "1.0",
-    "description": "Remove suggested posts on Facebook after every 100px of mouse scroll.",
+    "name": "Facebook QuietFeed",
+    "version": "0.1.0",
+    "description": "Facebook QuietFeed: Silence the noise and distractions on your Facebook feed for a more focused browsing experience.",
     "permissions": [
         "activeTab",
         "storage",
-        "webNavigation",
-        "https://www.facebook.com/"
+        "webNavigation"
     ],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "images/icon16.png",
-            "48": "images/icon48.png",
-            "128": "images/icon128.png"
+            "16": "assets/logo/icon16.png",
+            "48": "assets/logo/icon48.png",
+            "128": "assets/logo/icon128.png"
         }
     },
     "content_scripts": [
@@ -28,8 +27,11 @@
         }
     ],
     "icons": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
+            "16": "assets/logo/icon16.png",
+            "48": "assets/logo/icon48.png",
+            "128": "assets/logo/icon128.png"
+    },
+    "background": {
+        "service_worker": "content.js"
     }
 }
