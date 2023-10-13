@@ -1,24 +1,16 @@
 let lastScrollPosition = 0;
-let isScrollingDown = false;
 
 window.addEventListener("scroll", function () {
   let currentScrollPosition = window.scrollY;
 
   // Check if the user is scrolling down (scrolling away from the top)
   if (currentScrollPosition > lastScrollPosition) {
-    isScrollingDown = true;
-  } else {
-    isScrollingDown = false;
+    // Check if the user scrolled at least 100px and is scrolling down
+    if (Math.abs(currentScrollPosition - lastScrollPosition) >= 300) {
+      hideSuggestedPosts();
+    }
   }
-
-  // Check if the user scrolled at least 100px and is scrolling down
-  if (
-    Math.abs(currentScrollPosition - lastScrollPosition) >= 100 &&
-    isScrollingDown
-  ) {
-    hideSuggestedPosts();
-    lastScrollPosition = currentScrollPosition;
-  }
+  lastScrollPosition = currentScrollPosition;
 });
 
 function hideSuggestedPosts() {
